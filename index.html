@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fonts/pirelli-bold.otf">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <title>Museum lover</title>
+</head>
+<body>
+  
+
+  
+  <div id="screensaver">
+    <p id="screensaver-text">Vous êtes toujours là ?<br> Le jeu va recommencer si vous ne faites rien dans 20 secondes.</p>
+    <img src="img/alarm.png" alt="">
+  </div>
+ 
+
+
+<div id="quiz">
+  <div id="quiz-start-screen">
+    <img class="img-start" src="img/logo.png" alt="">
+    <p id="text-start">Est-ce que l'objet doit être conservé dans la collection d'artefacts ? <br>
+      -<br>
+      Cliquez à gauche: Non! <img class="start-icon" src="img/no_start_icon.png" alt=""> <br>
+      Cliquez à droite: Oui! <img class="start-icon" src="img/yes_start_icon.png" alt=""><br>
+      -<br>
+      Si vos choix correspondent à 100% avec ceux du Muséum, vous recevez une surprise !</p>
+    <p class="quiz-style-btn"><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/scripts.js"></script>
+<script>
+  $('#quiz').quiz({
+    //resultsScreen: '#results-screen',
+    //counter: false,
+    //homeButton: '#custom-home',
+    counterFormat: '%current / %total',
+    questions: [
+      {
+        't': 'Laisse pour chien',
+        'i': '<img class="img-question" src="img/tinder-laisse.jpg">',
+        'q': "J'aime les balades au bord du lac le dimanche après-midi. Mon pêché mignon, c'est de regarder le coucher de soleil. En vrai coeur d'artichaut, je m'attache très rapidement!",
+        'c': 'promenade à deux - nature - lien - discipline',
+        'options': [
+          '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">La laisse témoigne des actions de domestication qui se jouent au quotidien entre l’être humain et son chien. La laisse est un dispositif facilitant la présence des chiens en société.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">La laisse témoigne des actions de domestication qui se jouent au quotidien entre l’être humain et son chien. La laisse est un dispositif facilitant la présence des chiens en société.</p>'
+      },
+      {
+        't': 'Spray correcteur de comportement',
+        'i': '<img class="img-question" src="img/tinder-pet-corr.jpg">',
+        'q': 'Grâce à moi, fini les situations embarassantes au parc ou à la plage. Au moindre faux-pas je me mets en travers de tout aboiement, vol de nourriture ou agressivité.',
+        'c': 'spray - stop - gentil - comportement',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Le spray correcteur est utilisé par l’être humain dans un processus d’éducation et dans le but de faciliter la présence des chiens en société. Il produit un sifflement d’air comprimé qui interrompt les comportements indésirables.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Le spray correcteur est utilisé par l’être humain dans un processus d’éducation et dans le but de faciliter la présence des chiens en société. Il produit un sifflement d’air comprimé qui interrompt les comportements indésirables.</p>'
+      },
+      {
+        't': 'Canard en plastique',
+        'i': '<img class="img-question" src="img/tinder-canard.jpg">',
+        'q': "Je fais coin-coin lorsqu'on joue avec moi. Certains disent que ma présence les amuse, mais ma forme ne plaît parfois pas à tout le monde...",
+        'c': 'plastique - joie - rire - gaieté - jeux',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">L’être humain a développé un arsenal de dispositifs pour divertir les chiens. Ces jouets ont souvent un design animalier.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">L’être humain a développé un arsenal de dispositifs pour divertir les chiens. Ces jouets ont souvent un design animalier.</p>'
+      },
+      {
+        't': 'Glace en plastique',
+        'i': '<img class="img-question" src="img/tinder-glace.jpg">',
+        'q': 'Mon aspect savoureux permet toute sorte de jeux de rôle!',
+        'c': 'glace - miam - chocolat - gourmandise - plastique',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet.</span></h1><p class="text-response">L’être humain a développé un arsenal de dispositifs pour divertir les chiens, qui sont parfois inspirés de la gastronomie humaine.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet.</span></h1><p class="text-response">L’être humain a développé un arsenal de dispositifs pour divertir les chiens, qui sont parfois inspirés de la gastronomie humaine.</p>'
+      },
+      {
+        't': 'Snack au pénis de boeuf',
+        'i': '<img class="img-question" src="img/tinder-paquet-chien.jpg">',
+        'q': 'On me décrit souvent comme un super snack, à mastiquer avec plaisir et pendant un long moment. Je contribue à l’autonettoyage des dents et au renforcement des gencives.',
+        'c': 'nourriture - miam - apéro - en-cas',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Outre les multiples gammes spécifiques aux chiots, aux chiens âgés ou même aux canidés végétariens, on trouve des snacks originaux tels que les pénis de boeuf séchés.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Outre les multiples gammes spécifiques aux chiots, aux chiens âgés ou même aux canidés végétariens, on trouve des snacks originaux tels que les pénis de boeuf séchés.</p>'
+      },
+      {
+        't': 'Cache-anus',
+        'i': '<img class="img-question" src="img/tinder-rear-gear.jpg">',
+        'q': 'En toute discrétion, je suis là pour empêcher toute situation inconfortable et continuer d’avancer la tête haute !',
+        'c': 'carton - boule à facette - intimité - glamour',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Vivre aux côtés d’un animal domestique, c’est parfois le vouloir à son image. Pour parfaire l’anthropomorphisme, il existe même des artifices destinés à ménager les sensibilités. </p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Vivre aux côtés d’un animal domestique, c’est parfois le vouloir à son image. Pour parfaire l’anthropomorphisme, il existe même des artifices destinés à ménager les sensibilités. </p>'
+      },
+      {
+        't': 'Vêtement rayé',
+        'i': '<img class="img-question" src="img/tinder-body.jpg">',
+        'q': 'De nature passe-partout, je m’adapte à toutes les occasions, qu’elles soient formelles ou décontractées !',
+        'c': 'look - confort - stylisme - coton',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Les tenues vestimentaires canines permettent toutes les fantaisies. Projection de ses propres envies stylistiques ou réelle nécessité de protéger les chiens contre les rudesses climatiques, quels rôles jouent-elles vraiment ?</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Les tenues vestimentaires canines permettent toutes les fantaisies. Projection de ses propres envies stylistiques ou réelle nécessité de protéger les chiens contre les rudesses climatiques, quels rôles jouent-elles vraiment ?</p>'
+      },
+      {
+        't': 'Eau de toilette',
+        'i': '<img class="img-question" src="img/tinder-parfum.jpg">',
+        'q': 'Avant-gardiste, je suis le premier parfum conçu pour les nez les plus sensibles. Appliquez-moi sur le dos et les flancs.',
+        'c': 'beauté - senteur - parfums - fragrance',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Ce flacon d’eau de toilette témoigne de la façon dont la notion d’esthétique a été appliquée aux animaux domestiques. Les gammes de soin pour chien ressemblent à s’y méprendre à celles des humains.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Ce flacon d’eau de toilette témoigne de la façon dont la notion d’esthétique a été appliquée aux animaux domestiques. Les gammes de soin pour chien ressemblent à s’y méprendre à celles des humains.</p>'
+      },
+      {
+        't': 'Papier toilette',
+        'i': '<img class="img-question" src="img/tinder-pq.jpg">',
+        'q': 'Douceur agréable et sécurité: j’ai tout ce qu’on attend d’un papier hygiénique de grande qualité. Pour une sensation de propreté absolue.',
+        'c': '9 rouleaux - papier triple épaisseur - tendresse',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 0,
+        'correctResponse': '<img class="img-response" src="img/broken-heart.png"><h1><span>Non!<br>On ne garde pas cet objet!</span></h1><p class="text-response">Ce paquet de papier hygiénique ne met pas en évidence la relation être humain-chien. Parfois, le motif canin est apposé uniquement à des fins de marketing.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/broken-heart.png"><h1><span>Non!<br>On ne garde pas cet objet!</span></h1><p class="text-response">Ce paquet de papier hygiénique ne met pas en évidence la relation être humain-chien. Parfois, le motif canin est apposé uniquement à des fins de marketing.</p>'
+      },
+      {
+        't': 'T-shirt pour humains',
+        'i': '<img class="img-question" src="img/tinder-t-shirt.jpg">',
+        'q': 'De nature sociable, je me considère proche des gens. J’aime écouter leur coeur et réchauffer leurs épaules.',
+        'c': 'coton - fil - noir - blanc - doux',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 0,
+        'correctResponse': '<img class="img-response" src="img/broken-heart.png"><h1><span>Non!<br>On ne garde pas cet objet!</span></h1><p class="text-response">Les motifs animaliers sont souvent employés dans l’industrie de la mode. Ce t-shirt ne témoigne pas directement d’une interaction avec l’animal.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/broken-heart.png"><h1><span>Non!<br>On ne garde pas cet objet!</span></h1><p class="text-response">Les motifs animaliers sont souvent employés dans l’industrie de la mode. Ce t-shirt ne témoigne pas directement d’une interaction avec l’animal.</p>'
+      },
+
+
+
+
+
+
+
+
+
+
+      {
+        't': 'Clicker educatif',
+        'i': '<img class="img-question" src="img/tinder-clicker.jpg">',
+        'q': "Clik-clack! J'ai un petit faible pour les chiens bien élevés. Ma méthode est douce et rapide. Clik-clack !",
+        'c': 'Éducation - son - dressage - plastique',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Le clicker témoigne des actions de dressage entre l’être humain et son chien. Le "clicker training" est une méthode douce d’éducation qui se base sur le principe de récompense.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Le clicker témoigne des actions de dressage entre l’être humain et son chien. Le "clicker training" est une méthode douce d’éducation qui se base sur le principe de récompense.</p>'
+      },
+      {
+        't': 'CD de sociabilisation pour chiots',
+        'i': '<img class="img-question" src="img/tinder-cd.jpg">',
+        'q': "Bzzz-bzzz, coin-coin, tic-tac-tic, vroummm… voici un aperçu de mes talents de bruiteur. Dès la première écoute, toutes les peurs disparaissent !",
+        'c': 'CD - plastique - relaxation - bruits - ambiance',
+        'options': [
+          '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Ce CD vise à faciliter la socialisation des chiots. Les bruits étant souvent à l’origine de peurs chez les chiens, ce CD permet de les habituer à certains sons et contribue à éviter qu’ils soient apeurés par ceux-ci.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Ce CD vise à faciliter la socialisation des chiots. Les bruits étant souvent à l’origine de peurs chez les chiens, ce CD permet de les habituer à certains sons et contribue à éviter qu’ils soient apeurés par ceux-ci.</p>'
+      },
+      {
+        't': 'Zèbre en peluche',
+        'i': '<img class="img-question" src="img/tinder-zebre.jpg">',
+        'q': "Originaire de la savane, je suis à présent établi à Neuchâtel, où j'essaie tant bien que mal de donner un sens à ma vie. Ma passion: les accrobaties. Mon vice: les câlins.",
+        'c': 'Doudou - jouet - saut-périlleux - cozy',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">L’être humain a développé un arsenal de dispositifs pour divertir les chiens. Ces jouets ont souvent un design animalier.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">L’être humain a développé un arsenal de dispositifs pour divertir les chiens. Ces jouets ont souvent un design animalier.</p>'
+      },
+      {
+        't': 'Gamelle',
+        'i': '<img class="img-question" src="img/tinder-gamelle.jpg">',
+        'q': "Toujours partante pour aller boire un verre !",
+        'c': 'Eau - rafraichissement - mini-bulles - plastique',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Bleu, rouge ou à paillettes, cette gamelle figure parmi les accessoires créés pour le bien-être physique des chiens.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Bleu, rouge ou à paillettes, cette gamelle figure parmi les accessoires créés pour le bien-être physique des chiens.</p>'
+      },
+      {
+        't': 'Moules à biscuits',
+        'i': '<img class="img-question" src="img/tinder-moule.jpg">',
+        'q': 'Quoi de mieux que de faire plaisir à ses proches en leur concoctant de succulents biscuits à leur effigie ? ',
+        'c': 'Silicone - métal - fait maison - casse-croûte',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet.</span></h1><p class="text-response">À l’image des biscuits de Noël pour les êtres humains, il existe des kits pour réaliser soi-même des biscuits pour chien.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet.</span></h1><p class="text-response">À l’image des biscuits de Noël pour les êtres humains, il existe des kits pour réaliser soi-même des biscuits pour chien.</p>'
+      },
+      {
+        't': 'Pantalon de protection de luxe',
+        'i': '<img class="img-question" src="img/tinder-couches.jpg">',
+        'q': "Discrète, affectueuse, je protège peu importe la situation. Car lorsque j'aime, je m'engage sans compter !",
+        'c': 'Hygiénique - lavable à la machine - couleur noire',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Vivre aux côtés d’un animal domestique, c’est parfois le vouloir à son image. Pour parfaire l’anthropomorphisme, il existe même des artifices destinés à ménager les sensibilités. </p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Vivre aux côtés d’un animal domestique, c’est parfois le vouloir à son image. Pour parfaire l’anthropomorphisme, il existe même des artifices destinés à ménager les sensibilités. </p>'
+      },
+      {
+        't': 'Chaussures',
+        'i': '<img class="img-question" src="img/tinder-chaussures.jpg">',
+        'q': "En plus d'associer confort et fonctionnalité, l'extérieur en simili-cuir et le doublage en fourrure confèrent un look sportif et gardent les pattes au sec.",
+        'c': 'Style - élégance - confort - antidérapant',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Les tenues vestimentaires canines permettent toutes les fantaisies. Projection de ses propres envies stylistiques ou réelle nécessité de protéger les chiens contre les rudesses climatiques, quels rôles jouent-elles vraiment ?</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Les tenues vestimentaires canines permettent toutes les fantaisies. Projection de ses propres envies stylistiques ou réelle nécessité de protéger les chiens contre les rudesses climatiques, quels rôles jouent-elles vraiment ?</p>'
+      },
+      {
+        't': 'Spray volumiseur',
+        'i': '<img class="img-question" src="img/tinder-spray-vol.jpg">',
+        'q': 'Grâce à mes talents en matière capillaires, je redonne volume et texture au pelage. Conçue spécialement pour les poils de chiens, ma formule est douce.',
+        'c': 'Volume - tendance - hairstyle - coiffure',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 2,
+        'correctResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Il témoigne de la façon dont la notion d’esthétique a été appliquée aux animaux domestiques. Les gammes de soin pour chien ressemblent à s’y méprendre à celles des humains.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/heart.png"><h1><span>Oui!<br>On garde cet objet!</span></h1><p class="text-response">Il témoigne de la façon dont la notion d’esthétique a été appliquée aux animaux domestiques. Les gammes de soin pour chien ressemblent à s’y méprendre à celles des humains.</p>'
+      },
+      {
+        't': 'Lampe',
+        'i': '<img class="img-question" src="img/tinder-chien.jpg">',
+        'q': "J'aime lire des poèmes au coin du feu, même si j'ai parfois un caractère électrique !",
+        'c': 'Ampoule - plastique - câble - prise',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 0,
+        'correctResponse': '<img class="img-response" src="img/broken-heart.png"><h1><span>Non!<br>On ne garde pas cet objet!</span></h1><p class="text-response">Parfois, la forme canine est apposée à titre purement décoratif ou de design. Dans la collection du Muséum, cette lampe n’a pas de sens.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/broken-heart.png"><h1><span>Oui!<br>On ne garde pas cet objet!</span></h1><p class="text-response">Parfois, la forme canine est apposée à titre purement décoratif ou de design. Dans la collection du Muséum, cette lampe n’a pas de sens.</p>'
+      },
+      {
+        't': 'Chocolat Suchard',
+        'i': '<img class="img-question" src="img/tinder-chocolat.jpg">',
+        'q': "Fondant, craquant et crémeux, je promets de ne jamais mentir sur mon pourcentage de cacao. Ma chanson préférée : Chocolat d'Olivia Ruiz.",
+        'c': 'poudre de cacao - sucre - papier d’aluminium - gourmandise',
+        'options': [
+        '<img class="no-yes" src="img/no_icon.png">',
+          '<span>Non!</span>garder?<span>Oui!</span>',
+          '<img class="no-yes" src="img/yes_icon.png">'
+        ],
+        'correctIndex': 0,
+        'correctResponse': '<img class="img-response" src="img/broken-heart.png"><h1><span>Non!<br>On ne garde pas cet objet!</span></h1><p class="text-response">Le marketing utilise le capital sympathie des compagnons à quatre pattes. Dans la collection du Muséum, ces plaques de chocolat n’ont pas leur place.</p>',
+        'incorrectResponse': '<img class="img-response" src="img/broken-heart.png"><h1><span>Oui!<br>On ne garde pas cet objet!</span></h1><p class="text-response">Le marketing utilise le capital sympathie des compagnons à quatre pattes. Dans la collection du Muséum, ces plaques de chocolat n’ont pas leur place.</p>'
+      }
+    ]
+  });
+</script>
+</body>
+</html>
